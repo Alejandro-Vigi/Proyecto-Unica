@@ -1,0 +1,274 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+} 
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*--------------Header---------------*/
+header {
+    /*posible ancho máximo del header*/
+    max-width: 1200px;
+    /*ancho definido del header*/
+    width: 95%;
+    /*es el padding superior*/
+    padding-top: 5px;
+    /*es el padding inferior*/
+    padding-bottom: 5px;
+}
+
+/*Clase para el logo del header*/
+.logo-header img{
+    /*altura de la imagen del logo*/
+    height: 50px;
+    /*margen izquierdo*/
+    margin-left: 1rem;
+}
+
+/*clase para los anchor tags del header*/
+.logo-header a{
+    /*se le quita lo subrayado al link*/
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    color: black;
+    transition-duration: 0.4s;
+}
+
+.logo-header :hover{
+    /*clase para cuando se coloca el cursor del mouse encima */
+    background-color: #555;
+    border-radius: 1rem;
+    color: white;
+}
+
+/*media query para diseño responsivo.
+
+Lo que hace es desplegar un flex cuando el ancho de la pantalla es minimo de 600px*/
+@media (min-width: 600px){
+    
+    .header
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/*colocamos el footer o pie, con un alto, alineado al centro*/
+.footer{
+    height: 1.2rem;
+    font-size: 0.5rem;
+    text-align: center;
+    align-items: center;
+    color: white;
+    background-color: #555;
+}
+
+/*responsividad para el logo del header cuando la pantalla es grande*/
+@media (min-width: 600px){
+    .logo-header{
+        display: flex;
+        margin-right: 1rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/*responsividad cuando el logo del header es de menor tamaño*/
+@media (max-width: 600px){
+    .logo-header{
+        display: flex;
+        flex-direction: column;
+        line-height : 1rem;
+        text-align: center;
+    }
+
+    .logo-header img{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+        height: 35px;
+        width: 30px;
+    }
+}
+
+
+/*---------Menu--------*/
+
+/*Imagen principal*/
+.hero{
+    margin-bottom: 2rem;
+    background-image: url(img/imagen.jpg);
+
+    /*repite la imagen en forma vertical*/
+    background-repeat:repeat-y;
+    background-size: 100%;
+    height: 500px;
+
+    /*le afecta las propiedades de ajuste como top, bottom, rigth.
+    Se posiciona con respecto a su flujo normmal de la hoja, según o
+    con respecto al lugar que le corresponde*/
+    position: relative;
+}
+
+/*Se alinea el texto del hero*/
+.hero-text {
+    text-align: center;
+
+    /*se posiciona con respecto a la ventana del navegador*/
+    position: absolute;
+    top: 30%;
+    left: 50%;
+
+    /*funcion que nos dice cuanto se mueve o traslada
+    con respecto al elemento. El movimiento es de forma
+    horizontal hacia la derecha, y hacia abajo en vertical.*/
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/*Boton del hero*/
+.hero-text button {
+    border-radius: 10px;
+
+    /*es una linea dibujada al borde del boton*/
+    outline: 0;
+
+    /*Combina una forma de desplegar en la linea
+    o en bloque, según sea. Se muestran en misma linea, 
+    pero respeta las prpiedades de ancho y alto*/
+    display: inline-block;
+    padding: 5px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+
+    /*Cambia la forma del cursor*/
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+    background-color: #555;
+    color: white;
+}
+
+/*media query para disminuir la altura del hero
+cuando la pantalla es menor de ciertos pixeles*/
+@media (max-width: 850px){
+    .hero{
+        height: 400px;
+    }
+}
+
+/*media query para disminuir la altura del hero
+cuando la pantalla es menor de ciertos pixeles*/
+@media (max-width: 670px){
+    .hero{
+        height: 200px;
+    }
+}
+
+
+/*--------Contenido de los cursos en el main---------*/
+
+/*maximo de ancho*/
+.contenedorCurso {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.logo-main{
+    display: flex;
+    margin-left: 2rem;
+}
+
+.logo-main img{
+    height: 35px;
+    margin-right: 1rem;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    background-color: #0f5187;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contenedorCursos{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.contenedorCursos h1{
+    text-align: center;
+}
+
+.imagenCurso {
+    float:center;
+    width:  40rem;
+    height: 20rem;
+
+    /*como se ajusta la imagen a ssu contenedor.
+    Se ajusta para llenar su contenedor, tratando de mantener
+    la relación de aspecto, pero sino, solo lo corta o hace zoom*/
+    object-fit: cover;
+}
+
+/*media query para pantalla alargada, muestra tres columnas*/
+@media (min-width: 600px) {
+    .tres-columnas{
+
+        display: flex;
+        /*flex-direction:column-reverse;*/
+        /*flex-direction:row; Medio inutil porque esto ya lo hace flex*/
+
+        /*Espacio entre columnas*/
+        column-gap: 2rem;
+    }
+/* A este tambien se le puede poner el calc( 33% - 2rem)*/
+}
+
+/*media query para alinear todo al centro cuando es pantalla pequeña*/
+@media (max-width: 600px){
+    .contenedorCurso {
+        text-align: center;
+    }
+}
+
+/*---------Footer--------*/
+.footer{
+    height: 1.2rem;
+    font-size: 0.5rem;
+    text-align: center;
+    align-items: center;
+    color: white;
+    background-color: #555;
+    margin-top: 0rem;
+}
+
+.footer a{
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+@media (min-width: 600px){
+    .footer{
+        display: flex;
+        justify-content:space-evenly;
+    }
+}

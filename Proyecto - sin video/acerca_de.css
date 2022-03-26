@@ -1,0 +1,51 @@
+body{
+    font-family: 'Raleway';
+} 
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+/*---------Acerca de--------*/
+
+.acerca img{
+    height: 200px;
+}
+
+.contenedor_acerca{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.dos_columnas{
+    text-align: center;
+}
+
+@media (min-width: 600px){
+
+    .acerca{
+        flex: 0 0 calc(50% - 2rem);
+    }
+
+    .dos_columnas{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.lista_ordenada{
+    text-align: center;
+}
+.lista_ordenada h6{
+    font-size: 1.5rem;
+}
+
+.ingenieria{
+    text-align:center;
+}

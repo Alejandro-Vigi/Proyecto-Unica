@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="acceso.css">
+    <link rel="shortcut icon" href="img/acceso2.png">
+    <title>Acceso a la página</title>
+</head>
+<body>
+
+    <header>
+        <div class = "logo-header">
+            <img src = "img/logo.png">
+            <a href = "index.html">Inicio</a>
+            <a href = "acceso.html">Acceso</a>
+            <a href = "acerca_de.html">Acerca de</a>
+            <a href = "formulario.html">Formulario</a>
+            <a href = "libre.html">Libre</a>
+            <p href = "#"></p>
+        </div>
+    </header> 
+
+    <div>
+        <h1 style="text-align:center">
+            Acceso
+        </h1>
+        
+        <!--Formulario para botones-->
+        <form method="get" action="index.html">
+            <div class="contenedor-imagen" style="background-color:#ebebeb;">
+                <img src="img/icon.jpeg" alt="Avatar" class="avatar">
+            </div>
+            
+            <div class="container">
+                <label for="usuario"><b>Usuario</b></label>
+                <input type="text" placeholder="Ingrese su nombre de usuario" name="usuario" required>
+            
+                <label for="contraseña"><b>Contraseña</b></label>
+                <input type="password" placeholder="Ingrese su contraseña" name="contraseña" required>
+                    
+                <button type="submit">Iniciar sesión</button>
+
+            </div>
+            <div class="containerCancelar" style="background-color:#ebebeb;">
+                <button type="button" class="boton-cancelar">Cancelar</button>
+            </div>
+        </form>
+
+    </div>
+
+    <footer class = "footer">
+        <h1>© All rights reserved 2022</h1>
+        <a href = "https://www.indautor.gob.mx/">Derechos</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+/*---------Libre--------*/
+.contenedorLibre {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    text-align: justify;
+}
+
+.contenedorLibre img{
+
+    width:100%;
+    text-align:center;
+    padding:5px;
+
+}
+
+.imagenLinea{
+    max-width:100%;
+    height:auto;
+}
+
+@media (min-width: 768px) {
+
+    .imagenLinea{
+        display: flex;
+        gap:2rem;
+        width: 20rem;
+        height: 20rem;
+        object-fit: contain;
+    }
+}
+  
+
+
+@media (min-width: 768px) {
+
+    .barraLateral{
+        display: flex;
+
+        /*Espacios entre cada elemento de forma
+        más arbitraria*/
+        gap: 2rem;
+    }
+
+    /*se ajusta el tamaño de la etiqueta html directamente*/
+    aside{
+        /*actua como un factor de crecimiento del item
+        con respecto a los otros*/
+
+        /*Esta es la version de un valor de flex, 
+        el cual cuenta con version en 1 valor, 2 valores
+        o 3 valores*/
+        flex: 1;
+    }
+
+    article{
+        /*Da un factor de crecimiento de 2 veces con respecto 
+        a otros items, este es el articulo de más tamaño*/
+        flex: 2;
+    }
+
+}
