@@ -71,3 +71,40 @@ create table INSCRIBE (
         ON UPDATE CASCADE ON DELETE CASCADE,
     CONSTRAINT inscribePk PRIMARY KEY (idAlumno,idCurso)
 )ENGINE=INNODB;
+
+
+
+
+--SENTENCIAS DML PARA AGREGAR REGISTROS
+
+--REGISTROS EN TEMAS DE CURSOS
+INSERT INTO TEMA (temaCurso) VALUES ("Desarrollo web");		--1
+INSERT INTO TEMA (temaCurso) VALUES ("Diseño web");			--2
+INSERT INTO TEMA (temaCurso) VALUES ("Ciberseguridad");		--3
+INSERT INTO TEMA (temaCurso) VALUES ("Programación móvil");	--4
+
+--REGISTROS DE PROFESORES
+INSERT INTO vprofesor (gradoEstudios, nombrePila, apellidoPaterno, apellidoMaterno, calle, ciudad) values ('L', "Alejandro", "Vigi", "Garduño", "Moneda", "CDMX"); 	--1
+INSERT INTO vprofesor (gradoEstudios, nombrePila, apellidoPaterno, apellidoMaterno, calle, ciudad) values ('L', "Marco", "Sanchez", "Perez", "Torres", "CDMX");		--2
+INSERT INTO vprofesor (gradoEstudios, nombrePila, apellidoPaterno, apellidoMaterno, calle, ciudad) values ('M', "Roberto", "Aguilar", "Ponce", "Roca", "Morelos");	--3
+INSERT INTO vprofesor (gradoEstudios, nombrePila, apellidoPaterno, apellidoMaterno, calle, ciudad) values ('M', "Hugo", "Roman", "Cruz", "Roma", "Nayarit");		--4
+
+--REGISTROS DE ALUMNOS
+INSERT INTO alumno (metodoPago, edad, nombrePila, apellidoPaterno, apellidoMaterno) VALUES ("Efectivo", 23, "Miguel", "Rodriguez", "Luna");							--1
+INSERT INTO alumno (metodoPago, edad, nombrePila, apellidoPaterno) VALUES ("Credito", 20, "Rodrigo", "Ramirez");													--2
+INSERT INTO alumno (metodoPago, edad, nombrePila, apellidoPaterno) VALUES ("Efectivo", 25, "Francisco", "Garcia");													--3
+INSERT INTO alumno (metodoPago, edad, nombrePila, apellidoPaterno) VALUES ("Efectivo", 19, "Alan", "Salazar");														--4
+INSERT INTO alumno (metodoPago, edad, nombrePila, apellidoPaterno, apellidoMaterno) VALUES ("Credito", 24, "Erick", "Calvillo", "Martinez");						--5
+
+--REGISTRO DE CURSOS
+INSERT INTO curso (descripcion, nombreCurso, dificultad, idProfesor, idTema) VALUES ("Curso con acercamiento en HTML y CSS", "Introduccion a HTML y CSS", 'P', 1, 2);				--1
+INSERT INTO curso (descripcion, nombreCurso, dificultad, idProfesor, idTema) VALUES ("Curso completo sobre PHP y Javascript", "PHP y Javascript de cero a experto", 'A', 3, 1);		--2
+INSERT INTO curso (descripcion, nombreCurso, dificultad, idProfesor, idTema) VALUES ("Curso de redes y seguridad intermedio", "Redes de datos seguras", 'I', 2, 3);					--3
+INSERT INTO curso (descripcion, nombreCurso, dificultad, idProfesor, idTema) VALUES ("Curso de programacion movil en android", "Programacion Android", 'I', 4, 4);					--4
+
+--REGISTRO DE INSCRIBE
+INSERT INTO inscribe (fecha, idAlumno, idCurso) VALUES ("2021-11-20", 5, 1);
+INSERT INTO inscribe (fecha, idAlumno, idCurso) VALUES ("2022-01-10", 2, 2);
+INSERT INTO inscribe (fecha, idAlumno, idCurso) VALUES ("2021-04-15", 1, 3);
+INSERT INTO inscribe (fecha, idAlumno, idCurso) VALUES ("2020-08-26", 3, 4);
+INSERT INTO inscribe (fecha, idAlumno, idCurso) VALUES ("2021-07-03", 4, 1);
