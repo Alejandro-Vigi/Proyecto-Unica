@@ -1,10 +1,11 @@
-body {
+/*body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
+*/
 form {
     border: 3px solid #f1f1f1;
 }
+
 
 /*estilo para una entrada de texto y password del form*/
 input[type=text], input[type=password] {
@@ -21,8 +22,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-button {
-  background-color: rgb(4, 101, 170);
+button.boton {
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -33,11 +33,11 @@ button {
   width: 100%;
 }
 
-button:hover {
+button.boton:hover {
   opacity: 0.8;
 }
 
-.boton-cancelar {
+button.boton-cancelar {
   width: auto;
   padding: 15px 18px;
   background-color: rgb(145, 39, 32);

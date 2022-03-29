@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="acceso.css">
-    <link rel="shortcut icon" href="img/acceso2.png">
+    <link rel="shortcut icon" href="../img/acceso2.png">
     <title>Acceso a la página</title>
 </head>
 <body>
 
     <header>
         <div class = "logo-header">
-            <img src = "img/logo.png">
-            <a href = "index.html">Inicio</a>
+            <img src = "../img/logo.png">
+            <a href = "../index.html">Inicio</a>
             <a href = "acceso.html">Acceso</a>
-            <a href = "acerca_de.html">Acerca de</a>
-            <a href = "formulario.html">Formulario</a>
-            <a href = "libre.html">Libre</a>
+            <a href = "../acercaDe/acerca_de.html">Acerca de</a>
+            <a href = "../formulario/formulario.html">Formulario</a>
+            <a href = "../libre/libre.html">Libre</a>
             <p href = "#"></p>
         </div>
     </header> 
@@ -31,7 +31,7 @@
         <!--Formulario para botones-->
         <form method="get" action="index.html">
             <div class="contenedor-imagen" style="background-color:#ebebeb;">
-                <img src="img/icon.jpeg" alt="Avatar" class="avatar">
+                <img src="../img/icon.jpeg" alt="Avatar" class="avatar">
             </div>
             
             <div class="container">
@@ -41,11 +41,11 @@
                 <label for="contraseña"><b>Contraseña</b></label>
                 <input type="password" placeholder="Ingrese su contraseña" name="contraseña" required>
                     
-                <button type="submit">Iniciar sesión</button>
+                <button class="boton" type="submit" style="background-color: rgb(4, 101, 170);">Iniciar sesión</button>
 
             </div>
             <div class="containerCancelar" style="background-color:#ebebeb;">
-                <button type="button" class="boton-cancelar">Cancelar</button>
+                <button class="boton boton-cancelar" type="button">Cancelar</button>
             </div>
         </form>
 
