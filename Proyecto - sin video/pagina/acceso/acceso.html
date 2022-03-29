@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head> 
@@ -6,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="acceso.css">
-    <link rel="shortcut icon" href="../img/acceso2.png">
+    <link rel="shortcut icon" href="../img/acceso2.png">    
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
     <title>Acceso a la página</title>
 </head>
 <body>
@@ -27,23 +30,32 @@
         <h1 style="text-align:center">
             Acceso
         </h1>
+
+        <?php 
+        if(!empty($login_err)){
+            echo '<div class="alert alert-danger">' . $login_err . '</div>';
+        }        
+        ?>
         
         <!--Formulario para botones-->
-        <form method="get" action="index.html">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="contenedor-imagen" style="background-color:#ebebeb;">
                 <img src="../img/icon.jpeg" alt="Avatar" class="avatar">
             </div>
             
             <div class="container">
                 <label for="usuario"><b>Usuario</b></label>
-                <input type="text" placeholder="Ingrese su nombre de usuario" name="usuario" required>
+                <input type="text" name="usuario" class="form-control <?php echo (!empty($nombre_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $nombreAlumno; ?>" placeholder="Ingrese su nombre de usuario" required>
             
                 <label for="contraseña"><b>Contraseña</b></label>
-                <input type="password" placeholder="Ingrese su contraseña" name="contraseña" required>
-                    
-                <button class="boton" type="submit" style="background-color: rgb(4, 101, 170);">Iniciar sesión</button>
+                <input type="password" name="contraseña" class="form-control <?php echo (!empty($apellido_err)) ? 'is-invalid' : ''; ?>" placeholder="Ingrese su contraseña" required>
 
             </div>
+
+            <div>
+                <input class="boton" type="submit" style="background-color: rgb(4, 101, 170);" value="Iniciar_Sesion">
+            </div>
+
             <div class="containerCancelar" style="background-color:#ebebeb;">
                 <button class="boton boton-cancelar" type="button">Cancelar</button>
             </div>

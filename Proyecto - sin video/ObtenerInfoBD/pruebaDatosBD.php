@@ -1,3 +1,8 @@
+
+<?php
+    include "obtener_datosAlumno.php"; 
+?>
+
 <head>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -8,31 +13,8 @@
     crossorigin="anonymous">
 </script>
   
-<script type="text/javascript">
-  $(document).ready(function(){ 
-      //con ajax, nos traemos los datos de la base de datos
-      $.ajax({ 
-          url: 'obtener_datos.php', 
-          type: 'get', dataType: 'JSON', 
-          success: function(response){ 
-              var len = response.length; 
-              for(var i=0; i<len; i++){ 
-                  var idA = response[i].id; 
-                  var name = response[i].nombre; 
-                  var paterno = response[i].apellido;  
-                  var tr_str = "<tr>" + "<td>" + idA + "</td>" + "<td>" + name + "</td>" + "<td>" + paterno + "</td></tr>"; 
-                  $("#tablaAlumnos tbody").append(tr_str); 
-              } 
-          } 
-      }); 
-  }); 
-
-</script>
-
-
-
 <div class="col-md-10"> 
-    <!--<table id="tablaAlumnos" class="table table-sm table-striped">-->
+    <!--<table id="tablaAlumnos" class="table table-sm table-striped">
     <table id="tablaAlumnos">
         <thead> 
             <tr>
@@ -42,5 +24,15 @@
            </tr> 
        </thead> 
        <tbody></tbody> 
-    </table> 
+    </table> -->
+    <?php
+            echo '<table>';
+            for ($i = 0; $i < count($datosAlumnos); $i++){
+                    echo '<tr>';
+                    echo "<td>{$datosAlumnos[$i]['nombre']}</td>";
+                    echo '</tr>';
+            }
+            echo '</table>';
+    ?>
+
 </div>
