@@ -24,20 +24,15 @@
             <p href = "#"></p>
         </div>
     </header>
-
-
-    <form class = "formulario " action="/action_page.php">
-            <br><br><br>
-            <label for="username">Nombre:</label>
-            <input type="text" id="username" name="username" placeholder = "p. ej.: Angel Morales" required>
-            <br><br><br>
-            <label for="email">Correo:</label>
-            <input type="email" id="username" name="email" placeholder = "ej. :angelmorales@gmail.com" required>
-            <br>
-            <textarea class = "comentario" cols="60" rows="8" id = "comentario" placeholder = "Ingresa el comentario..." required></textarea>
-            <br><br>
-            <input type="submit">
-      </form>
+    <hr>
+    <section class="formulario">
+        <input class = "form" type = "email" name="correo" id="correo" placeholder="Ingrese su Correo" required>
+        <input class = "form" type = "text" name="nombres" id="nombres" placeholder="Ingrese sus Nombres" required>
+        <input class = "form" type = "text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos" required>
+        <input class = "form" type = "text" name = "comentario" id = "comentario" placeholder = "Ingrese su comentario" required>
+        <button class = "boton boton-enviar" type = "button">Enviar</button>
+      </section>
+    
 
       <footer class = "footer">
         <div class = "iconos-footer">

@@ -408,39 +408,53 @@ span.contraseña {
 
 /*----------Formulario----------*/
 
-.formulario{
+
+.formulario {
+    width: 500px;
+    background: black;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 5px 10px 25px #000;
+  }
+  
+.form {
+    width: 100%;
+    background: black;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    border: 1px solid;
+    font-size: 18px;
+    color: white;
+}
+  
+.formulario p {
+    height: 40px;
     text-align: center;
-    background-image: url(img/puente.jpg);
-    background-repeat: no-repeat;
-    height: 600px;
-    background-size: 100%;
-    position: relative;
+    font-size: 18px;
+    line-height: 40px;
 }
-
-.formulario label{
-    padding: 0.3rem;
-    font-size: 1.5rem;
-    border-radius: 5px;
-    margin-right: 5rem;
-    border: solid;
-    background-color: white;
-    opacity: 90%;
+  
+.formulario a {
+    color: white;
+    text-decoration: none;
 }
-
-textarea {
-    resize: none;
-}
-
-#comentario{
-    text-align: center;
-    align-items: center;
-}
-
-.comentario{
-    margin-top: 3rem;
-}
-
-
+  
+.formulario a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  button.boton-enviar {
+    width: 100%;
+    padding: 15px 18px;
+    background-color: rgb(145, 39, 32);
+    font-size: 2rem;
+  }
 
 
 
