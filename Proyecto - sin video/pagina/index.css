@@ -13,6 +13,10 @@ img{
     max-width: 100%;
 }
 
+h2 {
+    text-align: center;
+}
+
 /*--------------Header---------------*/
 header {
     /*posible ancho máximo del header*/
@@ -271,4 +275,241 @@ cuando la pantalla es menor de ciertos pixeles*/
         display: flex;
         justify-content:space-evenly;
     }
+}
+
+
+
+
+
+
+/*----------Acceso----------*/
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+/*estilo para una entrada de texto y password del form*/
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+
+/*nos ayuda a renderizar elementos en linea tras de otros, pero respetando el ancho, alto y margenes*/
+  display: inline-block;
+  border: 1px solid #ccc;
+
+  /*soluciona problemas con los borders o paddings.
+  Poderoso para ajustar los anchos en contenedores y ventanas del navegador*/
+  box-sizing: border-box;
+}
+
+button.boton {
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+
+/*cambia el estilo del mouse*/
+  cursor: pointer;
+  width: 100%;
+}
+
+button.boton:hover {
+  opacity: 0.8;
+}
+
+button.boton-cancelar {
+  width: auto;
+  padding: 15px 18px;
+  background-color: rgb(145, 39, 32);
+}
+
+.contenedor-imagen {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+
+.containerCancelar {
+  text-align: center;
+}
+
+span.contraseña {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.contraseña {
+     display: block;
+     float: none;
+  }
+  .boton-cancelar {
+     width: 100%;
+  }
+}
+
+
+
+
+
+/*----------Acerca de----------*/
+
+.acerca img{
+    height: 200px;
+}
+
+.contenedor_acerca{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.dos_columnas{
+    text-align: center;
+}
+
+@media (min-width: 600px){
+
+    .acerca{
+        flex: 0 0 calc(50% - 2rem);
+    }
+
+    .dos_columnas{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.lista_ordenada{
+    text-align: center;
+}
+.lista_ordenada h6{
+    font-size: 1.5rem;
+}
+
+.ingenieria{
+    text-align:center;
+}
+
+
+
+
+
+
+
+
+/*----------Formulario----------*/
+
+.formulario{
+    text-align: center;
+    background-image: url(img/puente.jpg);
+    background-repeat: no-repeat;
+    height: 600px;
+    background-size: 100%;
+    position: relative;
+}
+
+.formulario label{
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-right: 5rem;
+    border: solid;
+    background-color: white;
+    opacity: 90%;
+}
+
+textarea {
+    resize: none;
+}
+
+#comentario{
+    text-align: center;
+    align-items: center;
+}
+
+.comentario{
+    margin-top: 3rem;
+}
+
+
+
+
+
+
+/*----------Libre----------*/
+
+.contenedorLibre {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    line-height: 2;
+    text-align: justify;
+}
+
+.contenedorLibre img{
+
+    width:100%;
+    text-align:center;
+    padding:5px;
+
+}
+
+.imagenLinea{
+    max-width:100%;
+    height:auto;
+}
+
+@media (min-width: 768px) {
+
+    .imagenLinea{
+        display: flex;
+        gap:2rem;
+        width: 20rem;
+        height: 20rem;
+        object-fit: contain;
+    }
+}
+  
+
+
+@media (min-width: 768px) {
+
+    .barraLateral{
+        display: flex;
+
+        /*Espacios entre cada elemento de forma
+        más arbitraria*/
+        gap: 2rem;
+    }
+
+    /*se ajusta el tamaño de la etiqueta html directamente*/
+    aside{
+        /*actua como un factor de crecimiento del item
+        con respecto a los otros*/
+
+        /*Esta es la version de un valor de flex, 
+        el cual cuenta con version en 1 valor, 2 valores
+        o 3 valores*/
+        flex: 1;
+    }
+
+    article{
+        /*Da un factor de crecimiento de 2 veces con respecto 
+        a otros items, este es el articulo de más tamaño*/
+        flex: 2;
+    }
+
 }
