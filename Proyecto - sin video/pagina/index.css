@@ -17,12 +17,19 @@ h2 {
     text-align: center;
 }
 
+body{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 /*--------------Header---------------*/
 header {
     /*posible ancho máximo del header*/
     max-width: 1200px;
     /*ancho definido del header*/
-    width: 95%;
+    /*margin: 95%;*/
     /*es el padding superior*/
     padding-top: 5px;
     /*es el padding inferior*/
@@ -41,16 +48,16 @@ header {
 .logo-header a{
     /*se le quita lo subrayado al link*/
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    font-size: 1.5rem;
+    padding: 1rem 1rem;
     color: black;
-    transition-duration: 0.4s;
+    transition-duration: 0.3s;
+    font-size: 1.7rem;
 }
 
 .logo-header :hover{
     /*clase para cuando se coloca el cursor del mouse encima */
-    background-color: #555;
-    border-radius: 1rem;
+    background-color: black;
+    border-radius: 1.5rem;
     color: white;
 }
 
