@@ -108,3 +108,12 @@ INSERT INTO inscribe (fecha, idAlumno, idCurso) VALUES ("2022-01-10", 2, 2);
 INSERT INTO inscribe (fecha, idAlumno, idCurso) VALUES ("2021-04-15", 1, 3);
 INSERT INTO inscribe (fecha, idAlumno, idCurso) VALUES ("2020-08-26", 3, 4);
 INSERT INTO inscribe (fecha, idAlumno, idCurso) VALUES ("2021-07-03", 4, 1);
+
+
+--CREACION DE LA TABLA PARA FORMULARIOS
+CREATE table FORMULARIO (
+	correo varchar(50) not null,
+	nombres varchar (50) not null,
+	apellidos varchar (50) not null,
+	comentario varchar (300) not null
+)ENGINE=INNODB;

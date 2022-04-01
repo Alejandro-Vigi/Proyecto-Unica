@@ -1,5 +1,19 @@
 <?php
    include '../../ObtenerInfoBD/sesionSecundaria.php';
+   include '../../Configuracion/config.php';
+   mysqli_set_charset($db, 'utf8'); 
+
+
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+    //if(isset($_POST['enviar'])) {
+        $email = $_POST['correo'];
+        $names = trim($_POST['nombres']);
+        $surnames = trim($_POST['apellidos']);
+        $comment = $_POST['comentario'];
+        $consulta = "INSERT INTO formulario (correo, nombres, apellidos, comentario) VALUES ('$email','$names','$surnames' ,'$comment')";
+        $resultado = mysqli_query($db,$consulta);
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -29,13 +43,13 @@
         </div>
     </header>
     <hr>
-    <section class="formulario">
+    <form class="formulario" method="post">
         <input class = "form" type = "email" name="correo" id="correo" placeholder="Ingrese su Correo" required>
         <input class = "form" type = "text" name="nombres" id="nombres" placeholder="Ingrese sus Nombres" required>
         <input class = "form" type = "text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos" required>
         <input class = "form" type = "text" name = "comentario" id = "comentario" placeholder = "Ingrese su comentario" required>
-        <button class = "boton boton-enviar" type = "button">Enviar</button>
-      </section>
+        <input class = "enviar-button" type = "submit" name = "enviar">
+    </form>
     
 
       <footer class = "footer">

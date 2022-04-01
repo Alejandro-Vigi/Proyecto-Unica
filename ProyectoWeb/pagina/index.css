@@ -408,11 +408,10 @@ span.contraseña {
 
 /*----------Formulario----------*/
 
-
 .formulario {
     width: 500px;
     background: black;
-    padding: 30px;
+    padding: 40px;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -448,14 +447,25 @@ span.contraseña {
     color: white;
     text-decoration: underline;
   }
-  
-  button.boton-enviar {
-    width: 100%;
-    padding: 15px 18px;
-    background-color: rgb(145, 39, 32);
-    font-size: 2rem;
-  }
 
+.enviar-button{
+	background-color: rgb(145, 39, 32);
+	color: #fff;
+    font-size: 2rem;
+    border-radius: 1rem;
+	width: calc(85% - 20px);
+    height: 40px;
+	margin: 0 10%;
+	margin-top: 22px;
+	border: none;
+}
+
+@media(max-width: 768px){
+    
+    .formulario{
+        width: 300px;
+    }
+}
 
 
 
