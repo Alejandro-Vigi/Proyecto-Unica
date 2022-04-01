@@ -539,7 +539,11 @@ span.contraseña {
 /*--ALUMNOS---*/
 
 .contenedorAlumnos{
-    height: 600px;
-    width:600px ;
+    width:auto;
+    height: 331px;
 
+}
+
+.alumnosText{
+    font-size: 1.5rem;
 }

@@ -21,17 +21,18 @@
             <a href = "../index.php">Inicio</a>
             <a href = "../acceso/acceso.php">Acceso</a>
             <a href = "../acercaDe/acerca_de.php">Acerca de</a>
-            <a href = "formulario.php">Formulario</a>
+            <a href = "../formulario/formulario.php">Formulario</a>
             <a href = "../libre/libre.php">Libre</a>
-            <a href = "../alumnos/alumno.php">Alumnos</a>
+            <a href = "alumno.php">Alumnos</a>
         </div>
     </header>
 
     <hr>
 
-
+    <div style="padding: 4rem 0rem; width:100%">
         <div class="conteiner p-4 contenedorAlumnos">
             <?php include("conexion.php");
+            include '../../ObtenerInfoBD/sesionSecundaria.php';
                         if(isset($_SESSION['message'])){?>
             <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
                 <?=  $_SESSION['message']?>
@@ -43,7 +44,7 @@
             
 
                 <div class="col-md-8 mx-auto">
-                    <table class="table table-hover">
+                    <table class="table table-hover alumnosText">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -79,9 +80,9 @@
                 </div> 
         
         </div>
+    </div>
+
     
-
-
     <footer class = "footer">
         <div class = "iconos-footer">
             <a href = "https://facebook.com" ><img src = "../img/facebook.png"></a>
@@ -94,6 +95,8 @@
                 <h1>© All rights reserved 2022</h1>
         </div>
     </footer>
+
+
 
 </body>
 
