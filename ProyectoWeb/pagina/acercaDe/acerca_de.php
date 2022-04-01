@@ -27,7 +27,7 @@
             <a href = "acerca_de.php">Acerca de</a>
             <a href = "../formulario/formulario.php">Formulario</a>
             <a href = "../libre/libre.php">Libre</a>
-            <p href = "#"></p>
+            <a href = "../alumnos/alumno.php">Alumnos</a>
         </div>
     </header>
     <!--Separacion horizontal para cambio temático-->

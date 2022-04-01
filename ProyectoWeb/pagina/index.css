@@ -534,3 +534,12 @@ span.contraseña {
     }
 
 }
+
+
+/*--ALUMNOS---*/
+
+.contenedorAlumnos{
+    height: 600px;
+    width:600px ;
+
+}

@@ -60,7 +60,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href = "../acercaDe/acerca_de.php">Acerca de</a>
             <a href = "../formulario/formulario.php">Formulario</a>
             <a href = "../libre/libre.php">Libre</a>
-            <p href = "#"></p>
+            <a href = "../alumnos/alumno.php">Alumnos</a>
         </div>
     </header> 
     <hr>

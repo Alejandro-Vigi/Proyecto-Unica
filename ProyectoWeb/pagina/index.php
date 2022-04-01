@@ -1,5 +1,6 @@
 <?php
    include '../ObtenerInfoBD/sesion.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +31,7 @@
             <a href = "acercaDe/acerca_de.php">Acerca de</a>
             <a href = "formulario/formulario.php">Formulario</a>
             <a href = "libre/libre.php">Libre</a>
+            <a href = "alumnos/alumno.php">Alumnos</a>
         </div>
     </header>
 
