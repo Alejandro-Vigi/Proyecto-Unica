@@ -6,10 +6,10 @@
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
     //if(isset($_POST['enviar'])) {
-        $email = $_POST['correo'];
-        $names = trim($_POST['nombres']);
-        $surnames = trim($_POST['apellidos']);
-        $comment = $_POST['comentario'];
+        $email = trim($_POST['correo']);
+        $names = ucwords($_POST['nombres']);
+        $surnames = ucwords($_POST['apellidos']);
+        $comment = ucfirst($_POST['comentario']);
         $consulta = "INSERT INTO formulario (correo, nombres, apellidos, comentario) VALUES ('$email','$names','$surnames' ,'$comment')";
         $resultado = mysqli_query($db,$consulta);
     }
