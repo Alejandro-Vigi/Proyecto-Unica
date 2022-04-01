@@ -27,9 +27,9 @@
             <a href = "#Software">Software</a>
             <a href = "#Inicio">Inicio</a>
             <a href = "acceso/acceso.php">Acceso</a>
-            <a href = "acercaDe/acerca_de.html">Acerca de</a>
-            <a href = "formulario/formulario.html">Formulario</a>
-            <a href = "libre/libre.html">Libre</a>
+            <a href = "acercaDe/acerca_de.php">Acerca de</a>
+            <a href = "formulario/formulario.php">Formulario</a>
+            <a href = "libre/libre.php">Libre</a>
         </div>
     </header>
 
@@ -37,7 +37,7 @@
             <div class="hero-text">
                 <h1 style="font-size:30px">Bienvenido a la página <?php echo $sesion_loggeada; ?></h1>
                 <p>Cursos sobre programación y desarrollo web</p>
-                <button><a href = "../ObtenerInfoBD/salirSesion.php" style="text-decoration: none; color:black;">Cerrar sesión</button>
+                <button><a href = "../ObtenerInfoBD/salirSesion.php" style="text-decoration: none; color:black;">Cerrar sesión</a></button>
             </div>
         </section>
 

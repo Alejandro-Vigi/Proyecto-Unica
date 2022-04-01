@@ -57,9 +57,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <img src = "../img/logo.png">
             <a href = "../index.php">Inicio</a>
             <a href = "acceso.php">Acceso</a>
-            <a href = "../acercaDe/acerca_de.html">Acerca de</a>
-            <a href = "../formulario/formulario.html">Formulario</a>
-            <a href = "../libre/libre.html">Libre</a>
+            <a href = "../acercaDe/acerca_de.php">Acerca de</a>
+            <a href = "../formulario/formulario.php">Formulario</a>
+            <a href = "../libre/libre.php">Libre</a>
             <p href = "#"></p>
         </div>
     </header> 
