@@ -26,12 +26,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
      
    if($count == 1) {
       //session_register("myusername");
-      $_SESSION['login_user'] = $myusername;
+      $_SESSION['usuario_loggeado'] = $myusername;
       
       echo "FUNCIONA";
-      header("location: ../index.html");
+      header("location: ../index.php");
    }else {
-      $error = "Your Login Name or Password is invalid";
+      $error = "Tu login no fue correcto";
    }
 }
 ?>
@@ -55,7 +55,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <header>
         <div class = "logo-header">
             <img src = "../img/logo.png">
-            <a href = "../index.html">Inicio</a>
+            <a href = "../index.php">Inicio</a>
             <a href = "acceso.php">Acceso</a>
             <a href = "../acercaDe/acerca_de.html">Acerca de</a>
             <a href = "../formulario/formulario.html">Formulario</a>
